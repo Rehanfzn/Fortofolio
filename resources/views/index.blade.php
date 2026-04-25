@@ -21,33 +21,54 @@
             <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed animate-[fadeIn_1s_ease-out_0.3s_forwards] opacity-0">
                 Seorang <span class="text-white font-semibold underline decoration-cyan-500/30">Fullstack Developer</span> yang hobi ngerakit aplikasi web pake Laravel.
             </p>
+            <div class="flex flex-col items-center gap-4 mt-12 opacity-0 animate-[fadeIn_1.5s_ease-in_forwards] [animation-delay:0.8s]">
 
-            <div class="flex flex-wrap justify-center gap-4 mt-12 opacity-0 animate-[fadeIn_1.5s_ease-in_forwards] [animation-delay:0.8s]">
-                <div class="inline-flex items-center gap-2 bg-slate-900/40 border border-slate-800 px-4 py-2 rounded-full hover:border-cyan-500/50 transition-all duration-300 [animation:floating_5s_ease-in-out_infinite]">
-                    <span class="relative flex h-2 w-2">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
-                    </span>
-                    <span class="text-[11px] font-mono text-slate-300 uppercase tracking-wider">Available for work</span>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="inline-flex items-center gap-2 bg-slate-900/40 border border-slate-800 px-4 py-2 rounded-full hover:border-cyan-500/50 transition-all duration-300 [animation:floating_5s_ease-in-out_infinite]">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                        </span>
+                        <span class="text-[11px] font-mono text-slate-300 uppercase tracking-wider">Available for work</span>
+                    </div>
+
+                    <div class="inline-flex items-center gap-2 bg-slate-900/40 border border-slate-800 px-4 py-2 rounded-full hover:border-blue-500/50 transition-all duration-300 [animation:floating_5s_ease-in-out_infinite_0.5s]">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                        </span>
+                        <span class="text-[11px] font-mono text-slate-300 uppercase tracking-wider">Based in Indonesia</span>
+                    </div>
+
+                    <div class="inline-flex items-center gap-2 bg-slate-900/40 border border-slate-800 px-4 py-2 rounded-full hover:border-purple-500/50 transition-all duration-300 [animation:floating_5s_ease-in-out_infinite_1s]">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                        </span>
+                        <span class="text-[11px] font-mono text-slate-300 uppercase tracking-wider">AI Integration</span>
+                    </div>
                 </div>
 
-                <div class="inline-flex items-center gap-2 bg-slate-900/40 border border-slate-800 px-4 py-2 rounded-full hover:border-blue-500/50 transition-all duration-300 [animation:floating_5s_ease-in-out_infinite_0.5s]">
-                    <span class="relative flex h-2 w-2">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-                    </span>
-                    <span class="text-[11px] font-mono text-slate-300 uppercase tracking-wider">Based in Indonesia</span>
-                </div>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="inline-flex items-center gap-2 bg-slate-900/40 border border-slate-800 px-4 py-2 rounded-full hover:border-emerald-500/50 transition-all duration-300 [animation:floating_5s_ease-in-out_infinite_1.5s]">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                        </span>
+                        <span class="text-[11px] font-mono text-slate-300 uppercase tracking-wider">Mahasiswa Aktif</span>
+                    </div>
 
-                <div class="inline-flex items-center gap-2 bg-slate-900/40 border border-slate-800 px-4 py-2 rounded-full hover:border-purple-500/50 transition-all duration-300 [animation:floating_5s_ease-in-out_infinite_1s]">
-                    <span class="relative flex h-2 w-2">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
-                    </span>
-                    <span class="text-[11px] font-mono text-slate-300 uppercase tracking-wider">AI Integration</span>
+                    <div class="inline-flex items-center gap-2 bg-slate-900/40 border border-slate-800 px-4 py-2 rounded-full hover:border-amber-500/50 transition-all duration-300 [animation:floating_5s_ease-in-out_infinite_2s]">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+                        </span>
+                        <span class="text-[11px] font-mono text-slate-300 uppercase tracking-wider">Fast Learner</span>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </section>
 
@@ -78,9 +99,10 @@
                     <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-70 group-hover:opacity-100">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-400">E-Commerce System</h3>
-                    <p class="text-slate-400 text-sm mb-4 line-clamp-2">Sistem toko online modern dengan Laravel.</p>
-                    <span class="text-[10px] font-mono bg-cyan-500/10 text-cyan-400 px-2 py-1 rounded">LARAVEL</span>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-400">E-Commerce System Elvo App</h3>
+                    <p class="text-slate-400 text-sm mb-4 line-clamp-2">Sistem toko online modern dengan HTML, CSS, dan JavaScript.</p>
+                    <span class="text-[10px] font-mono bg-cyan-500/10 text-cyan-400 px-2 py-1 rounded">HTML</span>
+                    <span class="text-[10px] font-mono bg-cyan-500/10 text-cyan-400 px-2 py-1 rounded">JS</span>
                 </div>
             </div>
 
@@ -89,7 +111,7 @@
                     <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-70 group-hover:opacity-100">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-400">SaaS Analytics</h3>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-400">Data Analytics</h3>
                     <p class="text-slate-400 text-sm mb-4 line-clamp-2">Dashboard statistik real-time Livewire.</p>
                     <span class="text-[10px] font-mono bg-blue-500/10 text-blue-400 px-2 py-1 rounded">LIVEWIRE</span>
                 </div>
@@ -106,33 +128,89 @@
                 </div>
             </div>
         </div>
-
-        <div class="pt-10 border-t border-slate-800/50">
+        <div class="pt-10 border-t border-slate-800/50" x-data="{ open: false, fileSrc: '', title: '' }">
             <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
                 <span class="text-cyan-500">#</span> Certificates & Awards
             </h3>
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="flex items-center gap-4 p-4 bg-slate-900/50 border border-slate-800 rounded-xl hover:bg-slate-800 transition-all">
-                    <div class="text-cyan-400">
+                <div @click="open = true; fileSrc = '{{ asset('pdfs/sertifikat 1.pdf') }}'; title = 'Workshop Machine Learning'"
+                    class="flex items-center gap-4 p-4 bg-slate-900/50 border border-slate-800 rounded-xl hover:bg-slate-800 hover:border-cyan-500/50 transition-all cursor-pointer group">
+                    <div class="text-cyan-400 group-hover:scale-110 transition-transform">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                         </svg>
                     </div>
                     <div>
-                        <h4 class="text-white text-sm font-semibold">Fullstack Laravel</h4>
+                        <h4 class="text-white text-sm font-semibold">Workshop Machine Learning</h4>
                         <p class="text-[10px] text-slate-500 uppercase tracking-widest">UBSI • 2025</p>
                     </div>
                 </div>
-
-                <div class="flex items-center gap-4 p-4 bg-slate-900/50 border border-slate-800 rounded-xl hover:bg-slate-800 transition-all">
-                    <div class="text-blue-400">
+                <div @click="open = true; fileSrc = '{{ asset('pdfs/sertifikat 2.pdf') }}'; title = 'Web Development Boot Camp'"
+                    class="flex items-center gap-4 p-4 bg-slate-900/50 border border-slate-800 rounded-xl hover:bg-slate-800 hover:border-blue-500/50 transition-all cursor-pointer group">
+                    <div class="text-blue-400 group-hover:scale-110 transition-transform">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </div>
                     <div>
-                        <h4 class="text-white text-sm font-semibold">Fullstack Developer Program</h4>
+                        <h4 class="text-white text-sm font-semibold">Web Development Boot Camp</h4>
                         <p class="text-[10px] text-slate-500 uppercase tracking-widest">Dicoding • 2024</p>
+                    </div>
+                </div>
+                <div @click="open = true; fileSrc = '{{ asset('pdfs/sertifikat 3.pdf') }}'; title = 'Laravel Backend Specialist'"
+                    class="flex items-center gap-4 p-4 bg-slate-900/50 border border-slate-800 rounded-xl hover:bg-slate-800 hover:border-orange-500/50 transition-all cursor-pointer group">
+                    <div class="text-orange-400 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-sm font-semibold">Laravel Backend Specialist</h4>
+                        <p class="text-[10px] text-slate-500 uppercase tracking-widest">BuildWithAngga • 2024</p>
+                    </div>
+                </div>
+
+                <div @click="open = true; fileSrc = '{{ asset('pdfs/sertifikat 4.pdf') }}'; title = 'UI/UX Design Foundation'"
+                    class="flex items-center gap-4 p-4 bg-slate-900/50 border border-slate-800 rounded-xl hover:bg-slate-800 hover:border-purple-500/50 transition-all cursor-pointer group">
+                    <div class="text-purple-400 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-sm font-semibold">UI/UX Design Foundation</h4>
+                        <p class="text-[10px] text-slate-500 uppercase tracking-widest">Coursera • 2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <div x-show="open"
+                class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90"
+                x-cloak>
+
+                <div class="relative w-full max-w-5xl h-[80vh] flex flex-col">
+                    <button @click="open = false" class="absolute -top-10 right-0 text-white hover:text-cyan-400 transition-colors flex items-center gap-2">
+                        <span class="text-xs font-mono">CLOSE [ESC]</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+
+                    <div class="bg-slate-900 rounded-xl border border-slate-700 overflow-hidden flex-grow shadow-2xl">
+                        <template x-if="fileSrc.endsWith('.pdf')">
+                            <iframe :src="fileSrc" class="w-full h-full" frameborder="0"></iframe>
+                        </template>
+
+                        <template x-if="!fileSrc.endsWith('.pdf')">
+                            <div class="flex items-center justify-center h-full">
+                                <img :src="fileSrc" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </template>
+                    </div>
+
+                    <div class="py-3">
+                        <p class="text-white font-bold text-center text-sm" x-text="title"></p>
                     </div>
                 </div>
             </div>

@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio | Rehan Faezan</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -121,7 +123,10 @@
 <body>
     <nav class="fixed top-0 w-full z-50 glass border-b border-slate-800 py-4">
         <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-            <div class="text-xl font-bold text-cyan-400">//Rehan Faezan </div>
+            <div class="text-xl font-bold text-cyan-400"
+                style="font-family: 'JetBrains Mono', monospace !important; letter-spacing: -0.05em;">
+                //Rehan Faezan
+            </div>
             <div class="space-x-6 text-sm font-medium">
                 <a href="#home" class="hover:text-cyan-400 transition-colors">Home</a>
                 <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
