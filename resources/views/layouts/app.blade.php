@@ -48,6 +48,36 @@
             backdrop-filter: blur(10px);
         }
 
+        @keyframes meteor {
+            0% {
+                transform: rotate(215deg) translateX(0);
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: rotate(215deg) translateX(-500px);
+                opacity: 0;
+            }
+        }
+
+        .animate-meteor {
+            animation: meteor linear infinite;
+        }
+
+        .meteor::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 1px;
+            background: linear-gradient(90deg, #94a3b8, transparent);
+        }
+
         /* --- KUMPULAN ANIMASI --- */
         /* KEYFRAMES UNTUK ALIRAN PANJANG */
         @keyframes mengalirKanan {
@@ -78,6 +108,7 @@
             }
         }
 
+
         /* PAKSA JALAN PAKE ID */
         #aurora-1 {
             animation: mengalirKanan 15s ease-in-out infinite;
@@ -90,6 +121,183 @@
         #aurora-3 {
             animation: mengalirKanan 25s ease-in-out infinite;
             animation-delay: 2s;
+        }
+
+        /* Section & Background */
+        .tech-stack-section {
+            padding: 5rem 0;
+            background-color: #000;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glow-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .glow-sphere {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 16rem;
+            height: 16rem;
+            background-color: rgba(34, 211, 238, 0.05);
+            border-radius: 9999px;
+            filter: blur(120px);
+        }
+
+        /* Typography & Badges */
+        .tech-text-wrapper {
+            width: 100%;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .tech-text-wrapper {
+                width: 50%;
+                text-align: left;
+            }
+        }
+
+        .badge-tech {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #1e293b;
+        }
+
+        .badge-dot {
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: #06b6d4;
+            border-radius: 9999px;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        .badge-text {
+            font-size: 10px;
+            font-family: monospace;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tech-title {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: -0.05em;
+        }
+
+        .tech-title-gradient {
+            background: linear-gradient(to right, #22d3ee, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .tech-subtitle {
+            color: #64748b;
+            font-size: 0.875rem;
+            font-family: monospace;
+            font-style: italic;
+        }
+
+        /* Cloud Container */
+        .tech-cloud-wrapper {
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .tech-cloud-wrapper {
+                width: 50%;
+            }
+        }
+
+        .cloud-canvas-area {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* TagCloud Items styling */
+        .tagcloud--item {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px !important;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: grab;
+            color: #22d3ee !important;
+            opacity: 0.6;
+            background: transparent !important;
+            transition: all 0.3s ease;
+        }
+
+        .tagcloud--item:hover {
+            color: #ffffff !important;
+            opacity: 1;
+            text-shadow: 0 0 12px rgba(34, 211, 238, 0.8);
+        }
+
+        /* Dividers */
+        .divider-cloud {
+            position: relative;
+        }
+
+        .divider-line-container {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .divider-line {
+            width: 100%;
+            border-top: 1px solid rgba(30, 41, 59, 0.5);
+        }
+
+        .divider-text-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .divider-label {
+            background-color: #000;
+            padding: 0 1rem;
+            font-size: 0.75rem;
+            font-family: monospace;
+            color: #475569;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+        }
+
+        .divider-footer-decoration {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-dot-gradient {
+            height: 0.25rem;
+            width: 3rem;
+            background: linear-gradient(to right, transparent, #334155, transparent);
         }
 
         /* Animasi Muncul Pelan */
@@ -116,6 +324,16 @@
             50% {
                 transform: translateY(-8px);
             }
+        }
+
+        /* Mencegah layout bergeser saat transisi absolute */
+        [x-cloak] {
+            display: none !important;
+        }
+
+        .min-w-\[200px\] {
+            min-width: 280px;
+            /* Sesuaikan dengan kata terpanjang lo */
         }
     </style>
 </head>

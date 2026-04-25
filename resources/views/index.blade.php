@@ -11,6 +11,13 @@
         </div>
         <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
     </div>
+    <div class="absolute inset-0 z-[1] pointer-events-none">
+        @for ($i = 0; $i < 20; $i++)
+            <span class="meteor animate-meteor absolute h-px w-[50px] rotate-[215deg] bg-gradient-to-r from-slate-500 to-transparent shadow-[0_0_0_1px_#ffffff10]"
+            style="top: {{ rand(-20, 80) }}%; left: {{ rand(0, 100) }}%; animation-delay: {{ rand(0, 8) }}s; animation-duration: {{ rand(2, 10) }}s;">
+            </span>
+            @endfor
+    </div>
 
     <div class="container mx-auto px-6 relative z-10 text-center">
         <div class="space-y-6">
@@ -19,7 +26,7 @@
             </h1>
 
             <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed animate-[fadeIn_1s_ease-out_0.3s_forwards] opacity-0">
-                Seorang <span class="text-white font-semibold underline decoration-cyan-500/30">Fullstack Developer</span> yang hobi ngerakit aplikasi web pake Laravel.
+                Seorang <span class="text-white font-semibold underline decoration-cyan-500/30">Fullstack Developer</span> muda yang passionet dengan teknologi web.
             </p>
             <div class="flex flex-col items-center gap-4 mt-12 opacity-0 animate-[fadeIn_1.5s_ease-in_forwards] [animation-delay:0.8s]">
 
@@ -72,19 +79,116 @@
     </div>
 </section>
 
-<section id="skills" class="py-12 border-y border-slate-900 bg-black-950/50">
-    <div class="max-w-6xl mx-auto px-6">
-        <p class="text-center text-slate-500 text-xs font-mono uppercase tracking-widest mb-8 italic">// tech_stack_experience</p>
-        <div class="flex flex-wrap justify-center gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
-            <div class="flex items-center gap-2 font-bold text-xl hover:text-orange-500 transition-colors">HTML</div>
-            <div class="flex items-center gap-2 font-bold text-xl hover:text-blue-500 transition-colors">CSS</div>
-            <div class="flex items-center gap-2 font-bold text-xl hover:text-yellow-400 transition-colors">JS</div>
-            <div class="flex items-center gap-2 font-bold text-xl hover:text-red-500 transition-colors">LARAVEL</div>
-            <div class="flex items-center gap-2 font-bold text-xl hover:text-cyan-400 transition-colors">TAILWIND</div>
-            <div class="flex items-center gap-2 font-bold text-xl hover:text-blue-600 transition-colors">MYSQL</div>
+<div class="relative">
+    <div class="absolute inset-0 flex items-center" aria-hidden="true">
+        <div class="w-full border-t border-slate-800/50"></div>
+    </div>
+    <div class="relative flex justify-center">
+        <span class="bg-black px-4 text-xs font-mono text-slate-600 uppercase tracking-[0.3em]">.</span>
+    </div>
+</div>
+
+<section id="tech-stack" class="py-20 bg-black relative overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/5 rounded-full blur-[120px]"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+
+            <div class="w-full md:w-1/2 space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/50 border border-slate-800">
+                    <span class="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
+                    <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">Tech Experience</span>
+                </div>
+
+                <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tighter">
+                    Crafting with <br />
+                    <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">skills</span>
+                </h2>
+
+                <p class="text-slate-500 text-sm md:text-base leading-relaxed max-w-sm font-mono italic">
+                    // Fokus pada performa, skalabilitas, dan pengalaman pengguna yang luar biasa.
+                </p>
+            </div>
+
+            <div class="w-full md:w-1/2 flex justify-center items-center">
+                <div class="relative w-[300px] h-[300px] flex items-center justify-center overflow-visible">
+                    <div id="minimal-cloud" class="text-cyan-500 font-bold"></div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
+<div class="relative">
+    <div class="absolute inset-0 flex items-center" aria-hidden="true">
+        <div class="w-full border-t border-slate-800/50"></div>
+    </div>
+    <div class="relative flex justify-center">
+        <div class="h-1 w-12 bg-gradient-to-r from-transparent via-slate-700 to-transparent"></div>
+    </div>
+</div>
+
+<style>
+    /* Styling Teks di Dalam Bola (Minimalis) */
+    .tagcloud--item {
+        font-family: 'JetBrains Mono', 'Inter', monospace;
+        font-size: 11px !important;
+        /* Ukuran teks kecil sesuai request */
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: grab;
+        color: #22d3ee !important;
+        /* Cyan-400 */
+        opacity: 0.6;
+        background: transparent !important;
+        transition: all 0.3s ease;
+    }
+
+    .tagcloud--item:hover {
+        color: #ffffff !important;
+        opacity: 1;
+        text-shadow: 0 0 12px rgba(34, 211, 238, 0.8);
+    }
+
+    .tagcloud--item:active {
+        cursor: grabbing;
+    }
+
+    /* Memastikan container tidak collapse */
+    .tagcloud {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const container = '#minimal-cloud';
+        const texts = [
+            'PHP', 'Laravel', 'Livewire', 'MySQL',
+            'Tailwind', 'JS', 'Alpine.js', 'Git',
+            'Node.js', 'API', 'Python', 'Docker',
+            'Redis', 'Nginx', 'PostgreSQL', 'Ubuntu'
+        ];
+
+        const options = {
+            radius: 140, // Radius pas untuk container 300px
+            maxSpeed: 'normal',
+            initSpeed: 'fast',
+            direction: 135,
+            keep: true,
+            dragControl: true, // Responsif 3D dengan kursor
+        };
+
+        // Render bola
+        TagCloud(container, texts, options);
+    });
+</script>
 
 <section id="projects" class="py-20 bg-black-950">
     <div class="max-w-6xl mx-auto px-6">
@@ -102,7 +206,7 @@
                     <h3 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-400">E-Commerce System Elvo App</h3>
                     <p class="text-slate-400 text-sm mb-4 line-clamp-2">Sistem toko online modern dengan HTML, CSS, dan JavaScript.</p>
                     <span class="text-[10px] font-mono bg-cyan-500/10 text-cyan-400 px-2 py-1 rounded">HTML</span>
-                    <span class="text-[10px] font-mono bg-cyan-500/10 text-cyan-400 px-2 py-1 rounded">JS</span>
+                    <span class="text-[10px] font-mono bg-yellow-500/10 text-yellow-400 px-2 py-1 rounded">JS</span>
                 </div>
             </div>
 
@@ -218,15 +322,45 @@
     </div>
 </section>
 
-<section id="contact" class="py-24 relative overflow-hidden">
-    <div class="absolute inset-0 bg-cyan-500/5 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]"></div>
-    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-        <h2 class="text-4xl font-bold text-white mb-6">Tertarik kerja bareng?</h2>
-        <p class="text-slate-400 mb-10 text-lg">Gue selalu terbuka buat diskusi project seru atau sekadar ngopi santai.</p>
-        <a href="mailto:rehan@example.com" class="inline-block bg-cyan-500 hover:bg-cyan-400 text-white font-bold px-10 py-4 rounded-full shadow-[0_0_20px_rgba(6,182,212,0.3)] transition-all transform hover:scale-105">
-            Kirim Pesan Sekarang
+<section id="contact" class="py-24 relative overflow-hidden bg-black">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">
+            Mari Kita
+            <span class="relative inline-block min-w-[200px] text-cyan-400"
+                x-data="{ 
+                    texts: ['Berkolaborasi', 'Membangun Ide', 'Ngoding Bareng', 'Diskusi Proyek'], 
+                    activeText: 0,
+                    init() { 
+                        setInterval(() => { 
+                            this.activeText = (this.activeText + 1) % this.texts.length 
+                        }, 3000); 
+                    } 
+                  }">
+                <template x-for="(text, index) in texts">
+                    <span x-show="activeText === index"
+                        x-transition:enter="transition ease-out duration-500"
+                        x-transition:enter-start="opacity-0 blur-lg translate-y-4"
+                        x-transition:enter-end="opacity-100 blur-0 translate-y-0"
+                        x-transition:leave="transition ease-in duration-500 absolute left-0 right-0"
+                        x-transition:leave-start="opacity-100 blur-0 translate-y-0"
+                        x-transition:leave-end="opacity-0 blur-lg -translate-y-4"
+                        x-text="text"
+                        class="inline-block">
+                    </span>
+                </template>
+            </span>
+        </h2>
+
+        <p class="text-slate-400 mb-10 max-w-lg mx-auto">
+            Punya ide gila atau proyek yang butuh tangan dingin seorang developer? Yuk, hubungi gue!
+        </p>
+
+        <a href="https://wa.me/087771661440"
+            class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-105 transition-transform text-white font-bold py-4 px-10 rounded-full">
+            Hubungi Saya Sekarang
         </a>
     </div>
+</section>
 </section>
 <footer class="py-4 border-t border-slate-900 bg-black">
     <div class="max-w-6xl mx-auto px-6">
