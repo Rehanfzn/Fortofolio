@@ -123,182 +123,7 @@
             animation-delay: 2s;
         }
 
-        /* Section & Background */
-        .tech-stack-section {
-            padding: 5rem 0;
-            background-color: #000;
-            position: relative;
-            overflow: hidden;
-        }
 
-        .glow-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-
-        .glow-sphere {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 16rem;
-            height: 16rem;
-            background-color: rgba(34, 211, 238, 0.05);
-            border-radius: 9999px;
-            filter: blur(120px);
-        }
-
-        /* Typography & Badges */
-        .tech-text-wrapper {
-            width: 100%;
-            text-align: center;
-        }
-
-        @media (min-width: 768px) {
-            .tech-text-wrapper {
-                width: 50%;
-                text-align: left;
-            }
-        }
-
-        .badge-tech {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            background-color: rgba(15, 23, 42, 0.5);
-            border: 1px solid #1e293b;
-        }
-
-        .badge-dot {
-            width: 0.5rem;
-            height: 0.5rem;
-            background-color: #06b6d4;
-            border-radius: 9999px;
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-
-        .badge-text {
-            font-size: 10px;
-            font-family: monospace;
-            color: #94a3b8;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .tech-title {
-            font-size: 2.25rem;
-            line-height: 2.5rem;
-            font-weight: 700;
-            color: #fff;
-            letter-spacing: -0.05em;
-        }
-
-        .tech-title-gradient {
-            background: linear-gradient(to right, #22d3ee, #3b82f6);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .tech-subtitle {
-            color: #64748b;
-            font-size: 0.875rem;
-            font-family: monospace;
-            font-style: italic;
-        }
-
-        /* Cloud Container */
-        .tech-cloud-wrapper {
-            width: 100%;
-        }
-
-        @media (min-width: 768px) {
-            .tech-cloud-wrapper {
-                width: 50%;
-            }
-        }
-
-        .cloud-canvas-area {
-            position: relative;
-            width: 300px;
-            height: 300px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* TagCloud Items styling */
-        .tagcloud--item {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 11px !important;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: grab;
-            color: #22d3ee !important;
-            opacity: 0.6;
-            background: transparent !important;
-            transition: all 0.3s ease;
-        }
-
-        .tagcloud--item:hover {
-            color: #ffffff !important;
-            opacity: 1;
-            text-shadow: 0 0 12px rgba(34, 211, 238, 0.8);
-        }
-
-        /* Dividers */
-        .divider-cloud {
-            position: relative;
-        }
-
-        .divider-line-container {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-        }
-
-        .divider-line {
-            width: 100%;
-            border-top: 1px solid rgba(30, 41, 59, 0.5);
-        }
-
-        .divider-text-container {
-            position: relative;
-            display: flex;
-            justify-content: center;
-        }
-
-        .divider-label {
-            background-color: #000;
-            padding: 0 1rem;
-            font-size: 0.75rem;
-            font-family: monospace;
-            color: #475569;
-            text-transform: uppercase;
-            letter-spacing: 0.3em;
-        }
-
-        .divider-footer-decoration {
-            position: relative;
-            display: flex;
-            justify-content: center;
-        }
-
-        .footer-dot-gradient {
-            height: 0.25rem;
-            width: 3rem;
-            background: linear-gradient(to right, transparent, #334155, transparent);
-        }
 
         /* Animasi Muncul Pelan */
         @keyframes fadeIn {
@@ -335,24 +160,88 @@
             min-width: 280px;
             /* Sesuaikan dengan kata terpanjang lo */
         }
+
+
+        /* navbar Efek Morphing Magic UI */
+
+        /* Transisi Utama */
+        .text-morph-enter {
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .text-morph-leave {
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        /* Saat teks baru mau masuk (dari bawah) */
+        .text-morph-start {
+            opacity: 0;
+            transform: translateY(15px) scale(0.95);
+            filter: blur(4px);
+        }
+
+        /* Saat teks aktif (diam di tempat) */
+        .text-morph-end {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            filter: blur(0px);
+        }
+
+        /* Saat teks lama mau keluar (ke atas) */
+        .text-morph-exit {
+            opacity: 0;
+            transform: translateY(-15px) scale(1.05);
+            filter: blur(4px);
+        }
+
+        /* Efek tambahan biar navbar lo makin pro */
+        .glass {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
     </style>
 </head>
 
 <body>
     <nav class="fixed top-0 w-full z-50 glass border-b border-slate-800 py-4">
         <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-            <div class="text-xl font-bold text-cyan-400"
-                style="font-family: 'JetBrains Mono', monospace !important; letter-spacing: -0.05em;">
-                //Rehan Faezan
+            <div class="text-xl font-bold text-cyan-400 flex items-center"
+                style="font-family: 'JetBrains Mono', monospace !important;">
+                <span class="mr-1">//</span>
+                <div class="relative h-[24px] overflow-hidden min-w-[150px]"
+                    x-data="{ 
+                    texts: ['RehanFaezan', 'WebDeveloper', 'Fullstack'], 
+                    activeText: 0,
+                    init() { 
+                        setInterval(() => { this.activeText = (this.activeText + 1) % this.texts.length }, 3000); 
+                    } 
+                 }">
+                    <template x-for="(text, index) in texts">
+                        <span x-show="activeText === index"
+                            x-transition:enter="text-morph-enter"
+                            x-transition:enter-start="text-morph-start"
+                            x-transition:enter-end="text-morph-end"
+                            x-transition:leave="text-morph-leave"
+                            x-transition:leave-start="text-morph-end"
+                            x-transition:leave-end="text-morph-exit"
+                            x-text="text"
+                            class="absolute left-0 top-0 whitespace-nowrap tracking-tighter">
+                        </span>
+                    </template>
+                </div>
             </div>
-            <div class="space-x-6 text-sm font-medium">
-                <a href="#home" class="hover:text-cyan-400 transition-colors">Home</a>
-                <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
-                <a href="#contact" class="bg-cyan-600 px-4 py-2 rounded-lg text-white hover:bg-cyan-500 transition-all">Contact</a>
+
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-white/80">
+                <a href="#home" class="hover:text-cyan-400 transition-colors leading-none flex items-center h-[34px]">Home</a>
+                <a href="#projects" class="hover:text-cyan-400 transition-colors leading-none flex items-center h-[34px]">Projects</a>
+
+                <a href="#contact" class="flex items-center justify-center bg-cyan-600/20 border border-cyan-500/50 px-4 h-[34px] rounded-full text-cyan-400 hover:bg-cyan-500 hover:text-white transition-all leading-none">
+                    Contact
+                </a>
             </div>
         </div>
     </nav>
-
     <main>
         @yield('content')
     </main>

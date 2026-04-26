@@ -84,16 +84,15 @@
         <div class="w-full border-t border-slate-800/50"></div>
     </div>
     <div class="relative flex justify-center">
-        <span class="bg-black px-4 text-xs font-mono text-slate-600 uppercase tracking-[0.3em]">.</span>
     </div>
 </div>
-
+<!-- skilss -->
 <section id="tech-stack" class="py-20 bg-black relative overflow-hidden">
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/5 rounded-full blur-[120px]"></div>
     </div>
 
-    <div class="container mx-auto px-6 relative z-10">
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
         <div class="flex flex-col md:flex-row items-center justify-between gap-12">
 
             <div class="w-full md:w-1/2 space-y-6 text-center md:text-left">
@@ -131,37 +130,19 @@
 </div>
 
 <style>
-    /* Styling Teks di Dalam Bola (Minimalis) */
+    .tagcloud--item img {
+        display: block;
+        pointer-events: none;
+        /* Biar kursornya gak keganggu gambar */
+    }
+
+    /* Biar buletan cloud-nya rapi */
     .tagcloud--item {
-        font-family: 'JetBrains Mono', 'Inter', monospace;
-        font-size: 11px !important;
-        /* Ukuran teks kecil sesuai request */
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        cursor: grab;
-        color: #22d3ee !important;
-        /* Cyan-400 */
-        opacity: 0.6;
-        background: transparent !important;
-        transition: all 0.3s ease;
-    }
-
-    .tagcloud--item:hover {
-        color: #ffffff !important;
-        opacity: 1;
-        text-shadow: 0 0 12px rgba(34, 211, 238, 0.8);
-    }
-
-    .tagcloud--item:active {
-        cursor: grabbing;
-    }
-
-    /* Memastikan container tidak collapse */
-    .tagcloud {
+        padding: 10px;
+        border-radius: 50%;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
     }
 </style>
 
@@ -169,27 +150,57 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const container = '#minimal-cloud';
+
         const texts = [
-            'PHP', 'Laravel', 'Livewire', 'MySQL',
-            'Tailwind', 'JS', 'Alpine.js', 'Git',
-            'Node.js', 'API', 'Python', 'Docker',
-            'Redis', 'Nginx', 'PostgreSQL', 'Ubuntu'
+            'PHP', 'Laravel', 'Tailwind', 'JS', 'MySQL',
+            'Livewire', 'Alpine', 'Node', 'Python',
+            'Docker', 'Git', 'VSCode', 'Redis'
         ];
 
-        const options = {
-            radius: 140, // Radius pas untuk container 300px
-            maxSpeed: 'normal',
-            initSpeed: 'fast',
-            direction: 135,
-            keep: true,
-            dragControl: true, // Responsif 3D dengan kursor
+        // Gue benerin mapping URL-nya di sini Han
+        const iconMapping = {
+            'PHP': 'https://cdn.simpleicons.org/php/777BB4',
+            'Laravel': 'https://cdn.simpleicons.org/laravel/FF2D20',
+            'Tailwind': 'https://cdn.simpleicons.org/tailwindcss/06B6D4',
+            'JS': 'https://cdn.simpleicons.org/javascript/F7DF1E',
+            'MySQL': 'https://cdn.simpleicons.org/mysql/4479A1',
+            'Livewire': 'https://cdn.simpleicons.org/livewire/FB7093',
+            'Alpine': 'https://cdn.simpleicons.org/alpinejs/8BC0D0',
+            'Node': 'https://cdn.simpleicons.org/nodedotjs/339933',
+            'Python': 'https://cdn.simpleicons.org/python/3776AB',
+            'Docker': 'https://cdn.simpleicons.org/docker/2496ED',
+            'Git': 'https://cdn.simpleicons.org/git/f05032',
+            'VSCode': 'https://cdn.simpleicons.org/visualstudiocode/007ACC', // Nama lengkapnya ini
+            'Redis': 'https://cdn.simpleicons.org/redis/DC382D'
         };
 
-        // Render bola
+        const options = {
+            radius: 150,
+            maxSpeed: 'normal',
+            initSpeed: 'fast',
+            keep: true
+        };
+
         TagCloud(container, texts, options);
+
+        setTimeout(() => {
+            const items = document.querySelectorAll('.tagcloud--item');
+            items.forEach(item => {
+                const text = item.innerText.trim();
+                if (iconMapping[text]) {
+                    // Kita tambahin onerror biar kalau link mati, dia balik ke teks asli
+                    item.innerHTML = `
+                        <img width="45" 
+                             src="${iconMapping[text]}" 
+                             style="display:block; transition:0.3s;" 
+                             onerror="this.style.display='none'; this.parentElement.innerText='${text}'" />
+                    `;
+                }
+            });
+        }, 200); // Naikkin dikit delaynya ke 200ms biar aman
     });
 </script>
-
+<!-- projects -->
 <section id="projects" class="py-20 bg-black-950">
     <div class="max-w-6xl mx-auto px-6">
         <div class="mb-12">
@@ -232,6 +243,7 @@
                 </div>
             </div>
         </div>
+        <!-- //sertifikat -->
         <div class="pt-10 border-t border-slate-800/50" x-data="{ open: false, fileSrc: '', title: '' }">
             <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
                 <span class="text-cyan-500">#</span> Certificates & Awards
