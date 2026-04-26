@@ -138,6 +138,33 @@
             }
         }
 
+        /* Pasang ini supaya animasi 3D-nya aktif */
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent
+            }
+        }
+
+        .animate-typing {
+            display: inline-block;
+            width: 0;
+            animation:
+                typing 3.5s steps(30, end) forwards,
+                blink .75s step-end infinite;
+            animation-delay: 1.2s;
+            /* Jalan setelah hi, I'm Rehan muncul */
+        }
+
         /* Animasi Mengambang */
         @keyframes floating {
 
@@ -164,7 +191,7 @@
 
         /* navbar Efek Morphing Magic UI */
         .glass {
-            background: rgba(15, 23, 42, 0.8);
+            background: rgba(6, 2, 39, 0.38);
             /* Warna dasar gelap */
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
@@ -246,8 +273,9 @@
 
             <div class="flex items-center space-x-2 md:space-x-6 text-sm font-medium">
                 <a href="#home" class="text-white/70 hover:text-cyan-400 transition-all px-2 py-1">Home</a>
+                <a href="#profile" class="text-white/70 hover:text-cyan-400 transition-all px-2 py-1">Profile</a>
                 <a href="#projects" class="text-white/70 hover:text-cyan-400 transition-all px-2 py-1">Projects</a>
-
+                <a href="#tech-stack" class="text-white/70 hover:text-cyan-400 transition-all px-2 py-1">Skills</a>
                 <a href="#contact" class="flex items-center justify-center bg-cyan-500 text-slate-900 px-5 py-1.5 rounded-full text-xs font-bold hover:bg-white hover:scale-105 transition-all shadow-lg shadow-cyan-500/20">
                     Contact
                 </a>

@@ -79,11 +79,56 @@
     </div>
 </section>
 
-<div class="relative">
+<section id="profile" class="py-20 bg-black relative overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-[120px]"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-16">
+
+            <div class="w-full md:w-3/5 space-y-6 text-center md:text-left">
+                <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tighter">
+                    Profil Singkat <br />
+                    <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">tentang saya</span>
+                </h2>
+
+                <p id="reveal-text" class="text-slate-800 text-lg md:text-base leading-relaxed font-mono italic">
+                    // Saya Mahasiswa aktif di Universitas Bina Sarana Informatika, jurusan Teknik Informatika. Saya memiliki passion yang besar dalam dunia pemrograman, terutama dalam pengembangan web. Dengan pengalaman yang saya miliki, saya selalu berusaha untuk terus belajar dan berkembang agar dapat memberikan solusi terbaik dalam setiap proyek yang saya kerjakan.
+                </p>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/50 border border-slate-800">
+                    <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+                    <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">SMAN 78 JAKARTA</span>
+                </div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/50 border border-slate-800">
+                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                    <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">UNIVERSITAS BINA SARANA INFORMATIKA</span>
+                </div>
+            </div>
+
+
+            <div class="w-full md:w-2/5 flex justify-center md:justify-end">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+
+                    <div class="relative bg-slate-900 rounded-2xl overflow-hidden border border-white/10 animate-float">
+                        <img src="{{ asset('pdfs/Rehanfzn.jpeg') }}"
+                            alt="Rehan Faezan"
+                            class="w-64 h-80 md:w-72 md:h-96 object-cover grayscale hover:grayscale-0 transition-all duration-500 rounded-2xl scale-105 hover:scale-100" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- garis pembatas -->
+<div class="relative py-10">
     <div class="absolute inset-0 flex items-center" aria-hidden="true">
-        <div class="w-full border-t border-slate-800/50"></div>
+        <div class="w-full border-t border-slate-800"></div>
     </div>
     <div class="relative flex justify-center">
+        <div class="h-1 w-24 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
     </div>
 </div>
 <!-- skilss -->
@@ -109,7 +154,20 @@
                 <p class="text-slate-500 text-sm md:text-base leading-relaxed max-w-sm font-mono italic">
                     // Fokus pada performa, skalabilitas, dan pengalaman pengguna yang luar biasa.
                 </p>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/50 border border-slate-800">
+                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                    <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">Frontend</span>
+                </div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/50 border border-slate-800">
+                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                    <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">html</span>
+                </div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/50 border border-slate-800">
+                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                    <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">Tailwind CSS</span>
+                </div>
             </div>
+
 
             <div class="w-full md:w-1/2 flex justify-center items-center">
                 <div class="relative w-[300px] h-[300px] flex items-center justify-center overflow-visible">
@@ -119,13 +177,13 @@
         </div>
     </div>
 </section>
-
-<div class="relative">
+<!-- garis pembatas -->
+<div class="relative py-10">
     <div class="absolute inset-0 flex items-center" aria-hidden="true">
-        <div class="w-full border-t border-slate-800/50"></div>
+        <div class="w-full border-t border-slate-800"></div>
     </div>
     <div class="relative flex justify-center">
-        <div class="h-1 w-12 bg-gradient-to-r from-transparent via-slate-700 to-transparent"></div>
+        <div class="h-1 w-24 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
     </div>
 </div>
 
@@ -145,33 +203,32 @@
         justify-content: center;
     }
 </style>
-
 <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const container = '#minimal-cloud';
 
+        // Pastikan teks di sini SAMA PERSIS dengan di iconMapping
         const texts = [
             'PHP', 'Laravel', 'Tailwind', 'JS', 'MySQL',
             'Livewire', 'Alpine', 'Node', 'Python',
             'Docker', 'Git', 'VSCode', 'Redis'
         ];
 
-        // Gue benerin mapping URL-nya di sini Han
         const iconMapping = {
-            'PHP': 'https://cdn.simpleicons.org/php/777BB4',
-            'Laravel': 'https://cdn.simpleicons.org/laravel/FF2D20',
-            'Tailwind': 'https://cdn.simpleicons.org/tailwindcss/06B6D4',
-            'JS': 'https://cdn.simpleicons.org/javascript/F7DF1E',
-            'MySQL': 'https://cdn.simpleicons.org/mysql/4479A1',
-            'Livewire': 'https://cdn.simpleicons.org/livewire/FB7093',
-            'Alpine': 'https://cdn.simpleicons.org/alpinejs/8BC0D0',
-            'Node': 'https://cdn.simpleicons.org/nodedotjs/339933',
-            'Python': 'https://cdn.simpleicons.org/python/3776AB',
-            'Docker': 'https://cdn.simpleicons.org/docker/2496ED',
-            'Git': 'https://cdn.simpleicons.org/git/f05032',
-            'VSCode': 'https://cdn.simpleicons.org/visualstudiocode/007ACC', // Nama lengkapnya ini
-            'Redis': 'https://cdn.simpleicons.org/redis/DC382D'
+            'PHP': 'php/777BB4',
+            'Laravel': 'laravel/FF2D20',
+            'Tailwind': 'tailwindcss/06B6D4',
+            'JS': 'javascript/F7DF1E',
+            'MySQL': 'mysql/4479A1',
+            'Livewire': 'livewire/FB7093',
+            'Alpine': 'alpinejs/8BC0D0', // Slug asli: alpinejs
+            'Node': 'nodedotjs/339933',
+            'Python': 'python/3776AB',
+            'Docker': 'docker/2496ED',
+            'Git': 'git/f05032',
+            'VSCode': 'visualstudiocode/FFFFFF', // Slug asli: visualstudiocode (Gue ganti putih biar keliatan)
+            'Redis': 'redis/DC382D'
         };
 
         const options = {
@@ -181,23 +238,45 @@
             keep: true
         };
 
+        // Inisialisasi
         TagCloud(container, texts, options);
 
-        setTimeout(() => {
+        // Fungsi sakti buat ganti teks jadi gambar
+        function forceReplaceIcons() {
             const items = document.querySelectorAll('.tagcloud--item');
+
+            if (items.length < texts.length) {
+                // Kalau jumlah item belum lengkap, tunggu 50ms lagi
+                setTimeout(forceReplaceIcons, 50);
+                return;
+            }
+
             items.forEach(item => {
-                const text = item.innerText.trim();
-                if (iconMapping[text]) {
-                    // Kita tambahin onerror biar kalau link mati, dia balik ke teks asli
-                    item.innerHTML = `
-                        <img width="45" 
-                             src="${iconMapping[text]}" 
-                             style="display:block; transition:0.3s;" 
-                             onerror="this.style.display='none'; this.parentElement.innerText='${text}'" />
-                    `;
+                const currentText = item.innerText.trim();
+
+                if (iconMapping[currentText]) {
+                    const slug = iconMapping[currentText];
+                    const imgElement = document.createElement('img');
+                    imgElement.width = 40;
+                    imgElement.src = `https://cdn.simpleicons.org/${slug}`;
+                    imgElement.style.display = 'block';
+                    imgElement.style.transition = '0.3s';
+
+                    // Kita bersihkan dulu isi aslinya, baru masukin gambar
+                    item.innerHTML = '';
+                    item.appendChild(imgElement);
+
+                    // Proteksi kalau gambar tetep gagal load
+                    imgElement.onerror = function() {
+                        item.innerText = currentText;
+                        item.style.fontSize = '12px';
+                    };
                 }
             });
-        }, 200); // Naikkin dikit delaynya ke 200ms biar aman
+        }
+
+        // Jalankan setelah cloud dibuat
+        setTimeout(forceReplaceIcons, 300);
     });
 </script>
 <!-- projects -->
