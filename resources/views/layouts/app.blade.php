@@ -163,60 +163,72 @@
 
 
         /* navbar Efek Morphing Magic UI */
+        .glass {
+            background: rgba(15, 23, 42, 0.8);
+            /* Warna dasar gelap */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
 
-        /* Transisi Utama */
+        /* Animasi masuk navigasi saat page load */
+        nav {
+            animation: islandIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes islandIn {
+            from {
+                transform: translate(-50%, -50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translate(-50%, 0);
+                opacity: 1;
+            }
+        }
+
+        /* Morphing Text Transitions (Tetap pakai yang lo punya) */
         .text-morph-enter {
-            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+            transition: all 0.5s ease;
+        }
+
+        .text-morph-start {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        .text-morph-end {
+            transform: translateY(0);
+            opacity: 1;
         }
 
         .text-morph-leave {
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            transition: all 0.5s ease;
         }
 
-        /* Saat teks baru mau masuk (dari bawah) */
-        .text-morph-start {
-            opacity: 0;
-            transform: translateY(15px) scale(0.95);
-            filter: blur(4px);
-        }
-
-        /* Saat teks aktif (diam di tempat) */
-        .text-morph-end {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-            filter: blur(0px);
-        }
-
-        /* Saat teks lama mau keluar (ke atas) */
         .text-morph-exit {
+            transform: translateY(-20px);
             opacity: 0;
-            transform: translateY(-15px) scale(1.05);
-            filter: blur(4px);
-        }
-
-        /* Efek tambahan biar navbar lo makin pro */
-        .glass {
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
         }
     </style>
 </head>
 
 <body>
-    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-800 py-4">
-        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-            <div class="text-xl font-bold text-cyan-400 flex items-center"
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] md:w-auto min-w-[900px]">
+        <div class="glass border border-white/10 px-12 md:px-8 py-3 rounded-3xl shadow-2xl flex justify-between items-center gap-8">
+
+            <div class="text-lg font-bold text-cyan-400 flex items-center"
                 style="font-family: 'JetBrains Mono', monospace !important;">
-                <span class="mr-1">//</span>
-                <div class="relative h-[24px] overflow-hidden min-w-[150px]"
+                <span class="mr-1 text-cyan-500/50">//</span>
+                <div class="relative h-[24px] overflow-hidden min-w-[120px] md:min-w-[150px]"
                     x-data="{ 
-                    texts: ['RehanFaezan', 'WebDeveloper', 'Fullstack'], 
-                    activeText: 0,
-                    init() { 
-                        setInterval(() => { this.activeText = (this.activeText + 1) % this.texts.length }, 3000); 
-                    } 
-                 }">
+                texts: ['RehanFaezan', 'WebDeveloper', 'Fullstack'], 
+                activeText: 0,
+                init() { 
+                    setInterval(() => { this.activeText = (this.activeText + 1) % this.texts.length }, 3000); 
+                } 
+             }">
                     <template x-for="(text, index) in texts">
                         <span x-show="activeText === index"
                             x-transition:enter="text-morph-enter"
@@ -226,17 +238,17 @@
                             x-transition:leave-start="text-morph-end"
                             x-transition:leave-end="text-morph-exit"
                             x-text="text"
-                            class="absolute left-0 top-0 whitespace-nowrap tracking-tighter">
+                            class="absolute left-0 top-0 whitespace-nowrap tracking-tighter text-sm md:text-base">
                         </span>
                     </template>
                 </div>
             </div>
 
-            <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-white/80">
-                <a href="#home" class="hover:text-cyan-400 transition-colors leading-none flex items-center h-[34px]">Home</a>
-                <a href="#projects" class="hover:text-cyan-400 transition-colors leading-none flex items-center h-[34px]">Projects</a>
+            <div class="flex items-center space-x-2 md:space-x-6 text-sm font-medium">
+                <a href="#home" class="text-white/70 hover:text-cyan-400 transition-all px-2 py-1">Home</a>
+                <a href="#projects" class="text-white/70 hover:text-cyan-400 transition-all px-2 py-1">Projects</a>
 
-                <a href="#contact" class="flex items-center justify-center bg-cyan-600/20 border border-cyan-500/50 px-4 h-[34px] rounded-full text-cyan-400 hover:bg-cyan-500 hover:text-white transition-all leading-none">
+                <a href="#contact" class="flex items-center justify-center bg-cyan-500 text-slate-900 px-5 py-1.5 rounded-full text-xs font-bold hover:bg-white hover:scale-105 transition-all shadow-lg shadow-cyan-500/20">
                     Contact
                 </a>
             </div>
