@@ -9,7 +9,8 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -107,6 +108,54 @@
                 transform: translateX(10%) translateY(0) rotate(0deg);
             }
         }
+
+        /* Animasi Putar 360 Derajat di Sumbu Y */
+        @keyframes spin360 {
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .perspective-1000 {
+            perspective: 1200px;
+        }
+
+        .transform-style-3d {
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+
+        /* Ini buat bayangan teks yang lo minta sebelumnya */
+        .text-shadow-custom {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+
+        /* Efek Shadow Teks */
+        .drop-shadow-custom {
+            text-shadow: 2px 2px 4px rgba(30, 41, 59, 0.8);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
 
 
         /* PAKSA JALAN PAKE ID */
@@ -238,6 +287,21 @@
             transform: translateY(-20px);
             opacity: 0;
         }
+
+        /* //projects */
+        .swiper-pagination-bullet {
+            background: #475569 !important;
+            /* Slate-500 */
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #22d3ee !important;
+            /* Cyan-400 */
+            width: 24px;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
     </style>
 </head>
 
@@ -250,7 +314,7 @@
                 <span class="mr-1 text-cyan-500/50">//</span>
                 <div class="relative h-[24px] overflow-hidden min-w-[120px] md:min-w-[150px]"
                     x-data="{ 
-                texts: ['RehanFaezan', 'WebDeveloper', 'Fullstack'], 
+                texts: ['www.saveshoes', 'shoes.loundry', 'saveshoes.id'], 
                 activeText: 0,
                 init() { 
                     setInterval(() => { this.activeText = (this.activeText + 1) % this.texts.length }, 3000); 
@@ -274,8 +338,8 @@
             <div class="flex items-center space-x-2 md:space-x-6 text-sm font-medium">
                 <a href="#home" class="text-white/70 hover:text-cyan-400 transition-all px-2 py-1">Home</a>
                 <a href="#profile" class="text-white/70 hover:text-cyan-400 transition-all px-2 py-1">Profile</a>
-                <a href="#projects" class="text-white/70 hover:text-cyan-400 transition-all px-2 py-1">Projects</a>
                 <a href="#tech-stack" class="text-white/70 hover:text-cyan-400 transition-all px-2 py-1">Skills</a>
+                <a href="#projects" class="text-white/70 hover:text-cyan-400 transition-all px-2 py-1">Projects</a>
                 <a href="#contact" class="flex items-center justify-center bg-cyan-500 text-slate-900 px-5 py-1.5 rounded-full text-xs font-bold hover:bg-white hover:scale-105 transition-all shadow-lg shadow-cyan-500/20">
                     Contact
                 </a>

@@ -86,40 +86,43 @@
 
     <div class="max-w-6xl mx-auto px-6 relative z-10">
         <div class="flex flex-col md:flex-row items-center justify-between gap-16">
-
             <div class="w-full md:w-3/5 space-y-6 text-center md:text-left">
                 <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tighter">
                     Profil Singkat <br />
                     <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">tentang saya</span>
                 </h2>
 
-                <p id="reveal-text" class="text-slate-800 text-lg md:text-base leading-relaxed font-mono italic">
+                <p class="text-slate-600 text-lg md:text-base leading-relaxed font-mono italic drop-shadow-[0_2px_2px_rgba(30,41,59,1)]">
                     // Saya Mahasiswa aktif di Universitas Bina Sarana Informatika, jurusan Teknik Informatika. Saya memiliki passion yang besar dalam dunia pemrograman, terutama dalam pengembangan web. Dengan pengalaman yang saya miliki, saya selalu berusaha untuk terus belajar dan berkembang agar dapat memberikan solusi terbaik dalam setiap proyek yang saya kerjakan.
                 </p>
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/50 border border-slate-800">
-                    <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-                    <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">SMAN 78 JAKARTA</span>
-                </div>
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/50 border border-slate-800">
-                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                    <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">UNIVERSITAS BINA SARANA INFORMATIKA</span>
-                </div>
-            </div>
 
-
-            <div class="w-full md:w-2/5 flex justify-center md:justify-end">
-                <div class="relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-
-                    <div class="relative bg-slate-900 rounded-2xl overflow-hidden border border-white/10 animate-float">
-                        <img src="{{ asset('pdfs/Rehanfzn.jpeg') }}"
-                            alt="Rehan Faezan"
-                            class="w-64 h-80 md:w-72 md:h-96 object-cover grayscale hover:grayscale-0 transition-all duration-500 rounded-2xl scale-105 hover:scale-100" />
+                <div class="flex flex-wrap gap-3">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/50 border border-slate-800">
+                        <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+                        <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">SMAN 78 JAKARTA</span>
+                    </div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/50 border border-slate-800">
+                        <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                        <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">UNIVERSITAS BSI</span>
                     </div>
                 </div>
             </div>
 
+            <div class="w-full md:w-2/5 flex justify-center md:justify-end">
+                <div class="perspective-1000 group">
+                    <div id="photo-360" class="relative transform-style-3d cursor-grab active:cursor-grabbing transition-transform duration-150">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur opacity-30"></div>
+
+                        <div class="relative bg-slate-900 rounded-2xl overflow-hidden border border-white/10">
+                            <img src="{{ asset('pdfs/Rehanfzn.jpeg') }}"
+                                alt="Rehan Faezan"
+                                class="w-64 h-80 md:w-72 md:h-96 object-cover grayscale group-hover:grayscale-0 transition-all duration-700 rounded-2xl" />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
     </div>
 </section>
 <!-- garis pembatas -->
@@ -289,13 +292,13 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
             <div class="group bg-black-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-black-500/50 transition-all duration-500">
                 <div class="aspect-video bg-slate-800 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-70 group-hover:opacity-100">
+                    <img src="{{ asset('pdfs/elvoapp.png') }}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-70 group-hover:opacity-100">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-400">E-Commerce System Elvo App</h3>
-                    <p class="text-slate-400 text-sm mb-4 line-clamp-2">Sistem toko online modern dengan HTML, CSS, dan JavaScript.</p>
-                    <span class="text-[10px] font-mono bg-cyan-500/10 text-cyan-400 px-2 py-1 rounded">HTML</span>
-                    <span class="text-[10px] font-mono bg-yellow-500/10 text-yellow-400 px-2 py-1 rounded">JS</span>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-400">E-Commerce Web Profile Brand Elvo App</h3>
+                    <p class="text-slate-400 text-sm mb-4 line-clamp-2">Sistem toko online modern dengan freamwork laravel, tailwindcss, dan php.</p>
+                    <span class="text-[10px] font-mono bg-cyan-500/10 text-red-400 px-2 py-1 rounded">Laravel</span>
+                    <span class="text-[10px] font-mono bg-cyan-500/10 text-cyan-400 px-2 py-1 rounded">tailwind css</span>
                 </div>
             </div>
 
@@ -491,4 +494,79 @@
         </div>
     </div>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const card = document.getElementById('photo-360');
+
+        let isDragging = false;
+        let targetX = 0,
+            targetY = 0; // Posisi yang kita pengen
+        let currentX = 0,
+            currentY = 0; // Posisi saat ini (yang ngejar target)
+        let lastMouseX = 0,
+            lastMouseY = 0;
+
+        // Faktor kehalusan (Makin kecil makin smooth/lambat ngejarnya)
+        const smoothness = 0.1;
+
+        // 1. SENSOR KLIK
+        card.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            lastMouseX = e.pageX;
+            lastMouseY = e.pageY;
+            card.style.cursor = 'grabbing';
+            e.preventDefault();
+        });
+
+        // 2. SENSOR GERAK (Update Target)
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) {
+                // Efek Hover Tilt Halus pas gak di-drag
+                const rect = card.getBoundingClientRect();
+                const hX = (e.clientX - rect.left - rect.width / 2) / 10;
+                const hY = (e.clientY - rect.top - rect.height / 2) / 10;
+                // Kita gak lgsg ubah transform, tapi update target
+                // targetX = -hY; 
+                // targetY = hX;
+                return;
+            }
+
+            const deltaX = e.pageX - lastMouseX;
+            const deltaY = e.pageY - lastMouseY;
+
+            targetY += deltaX * 0.5; // Update target rotasi Y
+            targetX -= deltaY * 0.5; // Update target rotasi X
+
+            lastMouseX = e.pageX;
+            lastMouseY = e.pageY;
+        });
+
+        window.addEventListener('mouseup', () => {
+            isDragging = false;
+            card.style.cursor = 'grab';
+        });
+
+        // 3. LOOP ANIMASI (Rahasia Biar Smooth)
+        function update() {
+            // Rumus Lerp: Current + (Target - Current) * Smoothness
+            currentX += (targetX - currentX) * smoothness;
+            currentY += (targetY - currentY) * smoothness;
+
+            // Terapkan ke elemen
+            card.style.transform = `rotateX(${currentX}deg) rotateY(${currentY}deg)`;
+
+            // Jalan terus setiap frame (60fps)
+            requestAnimationFrame(update);
+        }
+
+        // Jalankan loop
+        update();
+
+        // 4. RESET TILT PAS MOUSE KELUAR (Optional)
+        card.addEventListener('mouseleave', () => {
+            // Kalau mau balik ke posisi tegak pas ditinggal, aktifkan kode di bawah:
+            // targetX = 0; targetY = 0;
+        });
+    });
+</script>
 @endsection
